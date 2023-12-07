@@ -1,7 +1,26 @@
-<<<<<<< HEAD
-{{#section 'styles'}}
-<link rel="stylesheet" href="../../publico/css/style.css">
-{{/section}}
-=======
+<!DOCTYPE html>
+<html lang="pt-br">
 
->>>>>>> c7486a849cf5a170c1825003358a3cf6b68b63b1
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    {{{_sections.styles}}}
+</head>
+
+<body>
+    <header>
+        {{>menu}}
+    </header>
+    <main>
+        {{{body}}}
+    </main>
+    <footer>
+        {{>footer}}
+    </footer>
+
+</body>
+
+</html>
