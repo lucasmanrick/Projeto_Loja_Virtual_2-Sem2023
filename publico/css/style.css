@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+nav.menu-lateral {
+    width: 300 px;
+
+}
+.nav-button {
+    border: 0;
+    border-radius: 3px;
+    padding: 0px;
+    background-color: blueviolet;
+    margin: 0px;
+    cursor: pointer;
+}
+
+
