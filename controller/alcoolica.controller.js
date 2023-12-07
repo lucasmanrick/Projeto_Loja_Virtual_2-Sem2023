@@ -1,5 +1,5 @@
 const alcoolica = (req, res) => {
-    res.render('alcolica')
+    res.render('alcoolica')
 }
 
 module.exports = { alcoolica }
