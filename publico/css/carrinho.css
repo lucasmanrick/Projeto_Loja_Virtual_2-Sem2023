@@ -1,3 +1,9 @@
-body{
-    background-color: rgb(110, 104, 104);
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 95e3236952d1b66c7c4fe2e3e44233acd0b948fb
