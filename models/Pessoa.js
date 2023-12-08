@@ -1,53 +1,54 @@
 class Pessoa {
-    #nome;
-    #cpf;
-    #dataNasc;
-    #email;
-    #senha;
+    nome;
+    cpf;
+    dataNasc;
+    email;
+    senha;
 
     constructor (nome,cpf,DataNasc,Email,Senha) {
-        this.#nome = nome;
-        this.#cpf = cpf;
-        this.#dataNasc = DataNasc;
-        this.#email = Email;
-        this.#senha = Senha;
+        this.id = null;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.dataNasc = DataNasc;
+        this.email = Email;
+        this.senha = Senha;
     }
 
     get getName () {
-        return this.#nome;
+        return this.nome;
     }
 
     get getCpf () {
-        return this.#cpf;
+        return this.cpf;
     }
 
     get getDataNasc () {
-        return this.#dataNasc;
+        return this.dataNasc;
     }
 
     get getEmail () {
-        return this.#email;
+        return this.email;
     }
 
     get getSenha () {
-        return this.#senha;
+        return this.senha;
     }
 
     set newName (name) {
-        this.#nome = name;
+        this.nome = name;
     }
     set newCpf (cpf) {
-        this.#cpf = cpf;
+        this.cpf = cpf;
     }
     set newDataNasc (newBirthdate) {
-        this.#dataNasc = newBirthdate;
+        this.dataNasc = newBirthdate;
     }
     set newEmail (email) {
-        this.#email = email;
+        this.email = email;
     }
 
     set newPassword(newPassword) {
-        this.#senha = newPassword;
+        this.senha = newPassword;
     }
 
 }
