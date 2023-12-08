@@ -28,7 +28,7 @@ app.engine('handlebars', engine({
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
-app.use(express.static(`${__dirname}/views`))
+app.use(express.static(`${__dirname}/publico`))
 
 app.get('/',homeController.home)
 app.get('/adm',admController.adm)
