@@ -2,3 +2,30 @@
 <link rel="stylesheet" href="css/cadastro.css">
 {{/section}}
 
+<h1>Cadastro</h1>
+
+<form action="clienteRegister" method="post">
+    <div id="form-input-container">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome"><br><br>
+    </div>
+    <div id="form-input-container">
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf"><br><br>
+    </div>
+    <div id="form-input-container">
+        <label for="dataNasc">Data de nascimento:</label>
+        <input type="date" name="dataNasc" id="dataNasc"><br><br>
+    </div>
+    <div id="form-input-container">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail"><br><br>
+    </div>
+    <div id="form-input-container">
+        <label for="password">Senha:</label>
+        <input type="password" name="password" id="password" placeholder="Digite sua senha"><br><br>
+    </div>
+    <div id="form-button">
+        <input type="submit" id="but" value="Cadastrar">
+    </div>
+</form>
