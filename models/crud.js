@@ -5,6 +5,7 @@ const crud  = {
     read(filePath){
         if(fs.existsSync(filePath)){
             this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
+            console.log (crud.myData)
             return crud.myData;
         }
     },

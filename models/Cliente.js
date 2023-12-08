@@ -1,23 +1,10 @@
 const Pessoa = require ('./Pessoa');
-
+const crud = require('./crud');
 class Cliente extends Pessoa {
-    #funcionario;
-    #permissao;
-
     constructor(nome,cpf,DataNasc,Email,Senha) {
         super (nome,cpf,DataNasc,Email,Senha)
-        this.#funcionario = false;
-        this.#permissao = false;
-    }
-
-   set modifyAccount (funcionario) {
-        this.#funcionario = funcionario;
-        return this.#funcionario
-    }
-
-    set modifyPermission (permissao) {
-        this.#permissao = permissao;
-        return this.#permissao
+        this.funcionario = false;
+        this.permissao = false;
     }
 }
 

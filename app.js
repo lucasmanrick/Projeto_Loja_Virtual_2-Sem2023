@@ -34,6 +34,7 @@ app.get('/',homeController.home)
 app.get('/adm',admController.adm)
 app.get('/alcoolica',alcoolicaController.alcoolica)
 app.get('/cadastro', cadastroController.cadastro)
+app.post ('/clientRegister', cadastroController.clientRegister)
 app.get('/carrinho', carrinhoController.carrinho)
 app.get('/nao-alcoolicas', naoAlcoolicasController.naoAlcoolicas)
 
