@@ -1,6 +1,6 @@
 class Frete {
 
-    constructor (id,DataGerada,DataEntrega,Cnpj,Empresa,CodRastreio) {
+    constructor (id,DataEntrega,Cnpj,Empresa,CodRastreio) {
         this.id = null;
         this.dataGerada = new Date()
         this.dataEntrega = DataEntrega
