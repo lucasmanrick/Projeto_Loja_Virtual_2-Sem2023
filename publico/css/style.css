@@ -1,1 +1,21 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    position: relative;
 
+}
+
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    width: 100px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 9999px; /* Altura fictícia para simular um efeito de altura infinita */
+}
