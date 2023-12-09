@@ -50,4 +50,16 @@ class Venda {
     }
 }
 
+<<<<<<< HEAD
+let carrinho = new Venda();
+carrinho.adicionarAoCarrinho(["Produto 1", "Produto 2", "Produto 3"]);
+carrinho.mostrarCarrinho();
+
+carrinho.atualizarQuantidadeDoProduto("Produto 2",5);
+carrinho.mostrarCarrinho();
+
+carrinho.excluirItem("Produto 3");
+carrinho.mostrarCarrinho();
+=======
 module.exports = {Venda}
+>>>>>>> 518a9128522674008a5d8b592bb66164bbedf9c5

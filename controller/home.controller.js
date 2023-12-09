@@ -1,5 +1,5 @@
 const home = (req, res) => {
-    res.render('home'); // Renderiza a página 'home.handlebars'
+    res.render('home'); 
 };
 
 module.exports = { home };
