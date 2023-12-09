@@ -20,7 +20,22 @@ const crud  = {
             return ++idMaximo
         }
         return 1;
+    },
 
+    verificaCliente (cpf='')  {
+        let returnMessage;
+
+        if  (cpf) {
+            this.myData.forEach((el) => {
+                if (el.cpf === cpf) {
+                    returnMessage = true
+                }
+            })
+            if (returnMessage !== true) {
+                returnMessage = false
+            }
+        }
+        return returnMessage
     }
 }
 module.exports = crud
