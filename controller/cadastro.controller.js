@@ -9,8 +9,6 @@ const cadastro = (req, res) => {
 
 const clientRegister =(req,res) => {
 
-    
-    
     const {nome,cpf,DataNasc,Email,Senha} = req.body
     if (!crud.verificaCliente(cpf)) {
         const newClient = new Pessoa (nome,cpf,DataNasc,Email,Senha)
