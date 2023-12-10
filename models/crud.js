@@ -26,8 +26,8 @@ const crud  = {
         let returnMessage;
 
         if  (cpf) {
-            this.myData.forEach((el) => {
-                if (el.cpf === cpf) {
+              this.myData.forEach((el) => {
+                if (el.cpf == cpf) {
                     returnMessage = true
                 }
             })
@@ -36,6 +36,20 @@ const crud  = {
             }
         }
         return returnMessage
+    },
+
+    validaLogin (cpf,senha) {
+      let clientFounded;
+
+        this.myData.forEach((el) => {
+          if (cpf === el.cpf && senha === el.senha) {
+            clientFounded = el
+          }
+        })
+        if (clientFounded !== true) {
+          clientFounded = false
+        }
+        return clientFounded
     }
 }
 module.exports = crud

@@ -1,6 +1,4 @@
-{{#section 'styles'}}
-<link rel="stylesheet" href="css/cadastro.css">
-{{/section}}
+z
 
 <h1>Cadastro</h1>
 
@@ -25,6 +23,9 @@
         <label for="password">Senha:</label>
         <input type="password" name="Senha" id="password" placeholder="Digite sua senha"><br><br>
     </div>
+    {{#if returnMsg}}
+    <p>{{returnMsg}}</p>
+    {{/if}}
     <div id="form-button">
         <input type="submit" id="but" value="Cadastrar">
     </div>
