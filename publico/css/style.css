@@ -9,7 +9,7 @@ header {
    
 }
 
-.cadastro{
+.cadastro, .welcome-message {
     position: absolute;
     top: 0;
     right: 0;
@@ -55,4 +55,3 @@ header {
     position: fixed;
     
   }
-  

@@ -17,8 +17,6 @@ const clientRegister =(req,res) => {
           newClient.id = crud.verificaId()
           crud.create(newClient,filePath)
           res.render('cadastro')
-      }else {
-         res.render ('cadastro',{returnMsg:'Este CPF já esta cadastrado'})
       }
     }
 }
