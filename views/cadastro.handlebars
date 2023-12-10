@@ -1,9 +1,8 @@
-{{#section 'styles'}}
-<link rel="stylesheet" href="css/cadastro.css">
-{{/section}}
+z
 
 <h1>Cadastro</h1>
 
+<<<<<<< HEAD
 <main class="container" id="container">
         <div class="form-container sign-up">
             <form action="/clientRegister">
@@ -78,3 +77,33 @@
             </div>
         </div>
     </main>
+=======
+<form action="clientRegister" method="post">
+    <div id="form-input-container">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome"><br><br>
+    </div>
+    <div id="form-input-container">
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf"><br><br>
+    </div>
+    <div id="form-input-container">
+        <label for="dataNasc">Data de nascimento:</label>
+        <input type="date" name="DataNasc" id="dataNasc"><br><br>
+    </div>
+    <div id="form-input-container">
+        <label for="email">E-mail:</label>
+        <input type="email" name="Email" id="email" placeholder="Digite seu e-mail"><br><br>
+    </div>
+    <div id="form-input-container">
+        <label for="password">Senha:</label>
+        <input type="password" name="Senha" id="password" placeholder="Digite sua senha"><br><br>
+    </div>
+    {{#if returnMsg}}
+    <p>{{returnMsg}}</p>
+    {{/if}}
+    <div id="form-button">
+        <input type="submit" id="but" value="Cadastrar">
+    </div>
+</form>
+>>>>>>> 25c625a04581a7b2eb22478cd227f7aa941f07b5
