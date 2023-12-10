@@ -10,14 +10,16 @@ const cadastro = (req, res) => {
 const clientRegister =(req,res) => {
 
     const {nome,cpf,DataNasc,Email,Senha} = req.body
-    crud.read(filePath) 
-    if (!crud.verificaCliente(cpf)) {
-        const newClient = new Pessoa (nome,cpf,DataNasc,Email,Senha)
-        newClient.id = crud.verificaId()
-        crud.create(newClient,filePath)
-        res.render('cadastro',{returnMsg:'usuario Cadastrado com Sucesso!!'})
-    }else {
-       res.render ('cadastro',{returnMsg:'CPF já esta cadastrado'})
+    if (nome,cpf,DataNasc,Email,Senha) {
+      crud.read(filePath) 
+      if (!crud.verificaCliente(cpf)) {
+          const newClient = new Cliente (nome,cpf,DataNasc,Email,Senha)
+          newClient.id = crud.verificaId()
+          crud.create(newClient,filePath)
+          res.render('cadastro')
+      }else {
+         res.render ('cadastro',{returnMsg:'Este CPF já esta cadastrado'})
+      }
     }
 }
 
@@ -25,8 +27,8 @@ const loginEnter = (req,res) => {
   crud.read(filePath)
   const {cpf,senha} = req.body
   if (crud.validaLogin (cpf,senha)) {
-    sessionStorage.setItem('cliente',crud.validaLogin(cpf,senha))
-    res.redirect('home')
+    let sessionValue = crud.validaLogin(cpf,senha)
+    res.render('home', {dataClient:sessionValue})
   }
 
 }

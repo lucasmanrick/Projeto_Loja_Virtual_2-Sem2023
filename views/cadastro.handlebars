@@ -1,11 +1,12 @@
-z
+{{#section 'styles'}}
+<link rel="stylesheet" href="css/cadastro.css">
+{{/section}}
 
 <h1>Cadastro</h1>
 
-<<<<<<< HEAD
 <main class="container" id="container">
         <div class="form-container sign-up">
-            <form action="/clientRegister">
+            <form action="clientRegister" method="post">
                 <h1>Crie sua Conta </h1>
                 <div class="social-icons">
                     <a href="#" class="icon">
@@ -28,14 +29,14 @@ z
                 <input type="email" placeholder="Email" name="Email">
                 <input type="password" name="Senha" placeholder="Senha">
                 {{#if returnMsg}}
-                <p>{{returnMsg}}</p>
+                  <p style="color:red;">{{returnMsg}}</p>
                 {{/if}}
                 <input type="submit" class="botao">
             </form>
         </div>
 
         <div class="form-container sign-in">
-            <form action="/loginEnter">
+            <form action="loginEnter" method="post">
                 <h1>Faça o login</h1>
                 <div class="social-icons">
                     <a href="#" class="icon">
@@ -53,7 +54,7 @@ z
                 </div>
                 <span>ou use seu CPF e senha</span>
                 <input type="text" placeholder="Digite seu CPF" name="cpf">
-                <input type="password" placeholder="Digite sua senha" name="Senha">
+                <input type="password" placeholder="Digite sua senha" name="senha">
                 <a class="forgetpass" href="#">Esqueceu sua senha?</a>
                 <input class="botao" type="submit">
             </form>
@@ -77,33 +78,3 @@ z
             </div>
         </div>
     </main>
-=======
-<form action="clientRegister" method="post">
-    <div id="form-input-container">
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" placeholder="Digite seu nome"><br><br>
-    </div>
-    <div id="form-input-container">
-        <label for="cpf">CPF:</label>
-        <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf"><br><br>
-    </div>
-    <div id="form-input-container">
-        <label for="dataNasc">Data de nascimento:</label>
-        <input type="date" name="DataNasc" id="dataNasc"><br><br>
-    </div>
-    <div id="form-input-container">
-        <label for="email">E-mail:</label>
-        <input type="email" name="Email" id="email" placeholder="Digite seu e-mail"><br><br>
-    </div>
-    <div id="form-input-container">
-        <label for="password">Senha:</label>
-        <input type="password" name="Senha" id="password" placeholder="Digite sua senha"><br><br>
-    </div>
-    {{#if returnMsg}}
-    <p>{{returnMsg}}</p>
-    {{/if}}
-    <div id="form-button">
-        <input type="submit" id="but" value="Cadastrar">
-    </div>
-</form>
->>>>>>> 25c625a04581a7b2eb22478cd227f7aa941f07b5

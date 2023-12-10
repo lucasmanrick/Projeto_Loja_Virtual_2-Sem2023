@@ -5,7 +5,6 @@ const crud  = {
     read(filePath){
         if(fs.existsSync(filePath)){
             this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
-            console.log (crud.myData)
             return crud.myData;
         }
     },
@@ -39,17 +38,14 @@ const crud  = {
     },
 
     validaLogin (cpf,senha) {
-      let clientFounded;
-
+      let clientFounded = false;
+  
         this.myData.forEach((el) => {
-          if (cpf === el.cpf && senha === el.senha) {
-            clientFounded = el
+          if (cpf == el.cpf && senha == el.senha) {
+             clientFounded = el
           }
         })
-        if (clientFounded !== true) {
-          clientFounded = false
-        }
-        return clientFounded
+       return clientFounded
     }
 }
 module.exports = crud
