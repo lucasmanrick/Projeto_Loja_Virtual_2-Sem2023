@@ -16,8 +16,9 @@ const clientRegister =(req,res) => {
           const newClient = new Cliente (nome,cpf,DataNasc,Email,Senha)
           newClient.id = crud.verificaId()
           crud.create(newClient,filePath)
-          res.render('cadastro')
+          res.render('cadastro',{returnMsg:false})
       }
+      else {res.render('cadastro',{returnMsg:true})}
     }
 }
 

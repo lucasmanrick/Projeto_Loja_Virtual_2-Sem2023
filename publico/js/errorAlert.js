@@ -1,1 +1,0 @@
-alert ('este CPF já esta Cadastrado em nosso banco de dados, tente fazer o login')

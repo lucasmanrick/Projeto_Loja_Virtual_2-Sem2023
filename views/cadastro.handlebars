@@ -4,6 +4,12 @@
 
 <h1>Cadastro</h1>
 
+ {{#if returnMsg}}
+     <p style="color:red;">Cpf já cadastrado em nosso banco de dados</p>
+    {{else}}
+    <p style="color: green;">Cadastro Realizado com sucesso</p>
+  {{/if}}
+
 <main class="container" id="container">
         <div class="form-container sign-up">
             <form action="clientRegister" method="post">
@@ -28,9 +34,6 @@
                 <input type="date"  name="dataNasc">
                 <input type="email" placeholder="Email" name="Email">
                 <input type="password" name="Senha" placeholder="Senha">
-                {{#if returnMsg}}
-                  <p style="color:red;">{{returnMsg}}</p>
-                {{/if}}
                 <input type="submit" class="botao">
             </form>
         </div>
