@@ -4,11 +4,6 @@
 
 <h1>Cadastro</h1>
 
- {{#if returnMsg}}
-     <p style="color:red;">Cpf já cadastrado em nosso banco de dados</p>
-    {{else}}
-    <p style="color: green;">Cadastro Realizado com sucesso</p>
-  {{/if}}
 
 <main class="container" id="container">
         <div class="form-container sign-up">
@@ -81,3 +76,10 @@
             </div>
         </div>
     </main>
+
+    {{#if returnMsg }}
+     <p class="tituloCadastro"style="color:red;">Cpf já cadastrado em nosso banco de dados</p>
+    {{/if}}
+    {{#if sucess}}
+        <p class="tituloCadastro" style="color: green;">Cadastro Realizado com sucesso</p>
+    {{/if}}
