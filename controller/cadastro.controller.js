@@ -2,6 +2,7 @@ const Cliente = require("../models/Cliente")
 const Pessoa = require("../models/Pessoa")
 const crud = require("../models/crud")
 const filePath = './data/clientes.JSON'
+const secondFilePath = './data/adm.JSON'
 
 const cadastro = (req, res) => {
     res.render('cadastro')
@@ -23,7 +24,7 @@ const clientRegister =(req,res) => {
 }
 
 const loginEnter = (req,res) => {
-  crud.read(filePath)
+  crud.read(filePath,secondFilePath)
   const {cpf,senha} = req.body
   if (crud.validaLogin (cpf,senha)) {
     let sessionValue = crud.validaLogin(cpf,senha)

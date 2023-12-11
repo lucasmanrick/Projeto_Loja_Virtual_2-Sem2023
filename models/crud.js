@@ -2,11 +2,17 @@ const fs = require('fs');
 
 const crud  = {
     myData:[],
-    read(filePath){
-        if(fs.existsSync(filePath)){
-            this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
-            return crud.myData;
-        }
+    read(filePath,secondFilePath){
+
+      if(filePath && secondFilePath) {
+        this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
+        this.myData += JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
+        return crud.myData
+      }
+      if(fs.existsSync(filePath)){
+          this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
+          return crud.myData;
+      }
     },
     create(obj,filePath){
         this.myData.push(obj),
