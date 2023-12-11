@@ -19,11 +19,19 @@ header {
 
 }
 
+
 .cadastro {
   position: absolute;
   top: 0;
   right: 0;
   margin: 8px;
+
+.cadastro, .welcome-message {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 8px;
+
 }
 
 .login {
@@ -34,6 +42,7 @@ header {
 }
 
 .sidebar {
+
   display: flex;
   flex-direction: column;
   background-color: beige;
@@ -67,3 +76,37 @@ header {
   position: fixed;
 
 }
+=======
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    width: 120px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 9999px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+    
+  }
+  
+  .sidebar h2 {
+    color: #333; 
+    font-size: 24px;
+    margin-bottom: 10px; 
+  }
+  
+  .sidebar p {
+    color: #666; 
+    line-height: 1.6; 
+  }
+  .carrinho {
+    width: 20vh;
+    height: 10vh;
+    position: absolute;
+    bottom: 1px; 
+    left: 1PX;
+    position: fixed;
+    
+  }
+
