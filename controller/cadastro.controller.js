@@ -28,8 +28,10 @@ const loginEnter = (req,res) => {
   const {cpf,senha} = req.body
   if (crud.validaLogin (cpf,senha)) {
     let sessionValue = crud.validaLogin(cpf,senha)
+    crud.clienteLogado(true,sessionValue)
     res.render('home', {dataClient:sessionValue})
   }else{
+    
     res.render('cadastro')
   }
 

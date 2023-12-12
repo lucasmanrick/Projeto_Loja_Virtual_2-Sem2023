@@ -49,13 +49,17 @@ const crud  = {
 
     validaLogin (cpf,senha) {
       let clientFounded = false;
-      console.log(this.myData)
        this.myData.forEach((el) => {
           if (el.cpf == cpf && el.senha == senha) {
              clientFounded = el
           }
         })
        return clientFounded
+    },
+    clienteLogado(logado,dataClient) {
+      if(logado) {
+        fs.writeFileSync('./data/logado.JSON',JSON.stringify(dataClient),{encoding: 'utf-8'})
+      }
     }
 }
 module.exports = crud
