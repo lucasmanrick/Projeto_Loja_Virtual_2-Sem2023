@@ -17,9 +17,9 @@ const clientRegister =(req,res) => {
           const newClient = new Cliente (nome,cpf,DataNasc,Email,Senha)
           newClient.id = crud.verificaId()
           crud.create(newClient,filePath)
-          res.render('cadastro',{returnMsg:false})
+          res.render('cadastro',{returnMsg:true})
       }
-      else {res.render('cadastro',{returnMsg:true})}
+      else {res.render('cadastro',{sucess:true})}
     }
 }
 
@@ -29,6 +29,8 @@ const loginEnter = (req,res) => {
   if (crud.validaLogin (cpf,senha)) {
     let sessionValue = crud.validaLogin(cpf,senha)
     res.render('home', {dataClient:sessionValue})
+  }else{
+    res.render('cadastro')
   }
 
 }
