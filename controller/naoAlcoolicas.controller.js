@@ -1,5 +1,13 @@
+const crud = require("../models/crud");
+const filePath = './data/logado.JSON'
+
 const naoAlcoolicas = (req, res) => {
-    res.render('naoAlcoolicas')
+   const existClient = crud.read(filePath)
+   if(existClient) {
+      res.render('naoAlcoolicas',{dataClient:existClient}); 
+   }else {
+      res.render('naoAlcoolicas'); 
+   }
 }
 
 module.exports = { naoAlcoolicas }

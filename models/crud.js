@@ -1,4 +1,3 @@
-const { Console } = require('console');
 const fs = require('fs');
 
 const crud  = {
@@ -10,12 +9,13 @@ const crud  = {
           this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
           this.myData.push (JSON.parse(fs.readFileSync(secondFilePath,{encoding:'utf-8'})))
           dataReturn = crud.myData
+          console.log(dataReturn)
         }
       } else {
-        if(fs.existsSync(filePath)){
+         if(fs.existsSync(filePath)){
           this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
           dataReturn = crud.myData;
-      }
+         }
       }
       return dataReturn
     },
@@ -60,6 +60,6 @@ const crud  = {
       if(logado) {
         fs.writeFileSync('./data/logado.JSON',JSON.stringify(dataClient),{encoding: 'utf-8'})
       }
-    }
+    },
 }
 module.exports = crud

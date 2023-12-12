@@ -31,8 +31,7 @@ const loginEnter = (req,res) => {
     crud.clienteLogado(true,sessionValue)
     res.render('home', {dataClient:sessionValue})
   }else{
-    
-    res.render('cadastro')
+      res.render('cadastro')
   }
 
 }
