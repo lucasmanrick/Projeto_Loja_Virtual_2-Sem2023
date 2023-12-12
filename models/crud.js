@@ -34,7 +34,6 @@ const crud  = {
 
     verificaCliente (cpf='')  {
         let returnMessage;
-
         if  (cpf) {
               this.myData.forEach((el) => {
                 if (el.cpf == cpf) {
@@ -50,9 +49,9 @@ const crud  = {
 
     validaLogin (cpf,senha) {
       let clientFounded = false;
+      console.log(this.myData)
        this.myData.forEach((el) => {
           if (el.cpf == cpf && el.senha == senha) {
-            console.log(el)
              clientFounded = el
           }
         })
