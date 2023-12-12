@@ -4,28 +4,82 @@
 
 <h1>Cadastro</h1>
 
-<form action="clientRegister" method="post">
-    <div id="form-input-container">
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" placeholder="Digite seu nome"><br><br>
-    </div>
-    <div id="form-input-container">
-        <label for="cpf">CPF:</label>
-        <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf"><br><br>
-    </div>
-    <div id="form-input-container">
-        <label for="dataNasc">Data de nascimento:</label>
-        <input type="date" name="dataNasc" id="dataNasc"><br><br>
-    </div>
-    <div id="form-input-container">
-        <label for="email">E-mail:</label>
-        <input type="email" name="email" id="email" placeholder="Digite seu e-mail"><br><br>
-    </div>
-    <div id="form-input-container">
-        <label for="password">Senha:</label>
-        <input type="password" name="password" id="password" placeholder="Digite sua senha"><br><br>
-    </div>
-    <div id="form-button">
-        <input type="submit" id="but" value="Cadastrar">
-    </div>
-</form>
+
+<main class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="clientRegister" method="post">
+                <h1>Crie sua Conta </h1>
+                <div class="social-icons">
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <span>ou registre-se usando os seguintes critérios</span>
+                <input type="text" placeholder="Nome" name="nome">
+                <input type="text" placeholder="CPF" name="cpf">
+                <input type="date"  name="dataNasc">
+                <input type="email" placeholder="Email" name="Email">
+                <input type="password" name="Senha" placeholder="Senha">
+                <input type="submit" class="botao">
+            </form>
+        </div>
+
+        <div class="form-container sign-in">
+            <form id="loggin-form" action="loginEnter" method="post">
+                <h1>Faça o login</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <span>ou use seu CPF e senha</span>
+                <input type="text" placeholder="Digite seu CPF" name="cpf">
+                <input type="password" placeholder="Digite sua senha" name="senha">
+                <a class="forgetpass" href="#">Esqueceu sua senha?</a>
+                <input class="botao" type="submit">
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bem vindo de volta!</h1>
+                    <p>Realize o login com uma conta já existente para degustar de nossas maravilhosas bebidas</p>
+                    <button class="hidden botao" id="login">
+                        Entrar
+                    </button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Seja bem vindo!</h1>
+                    <p>Registre-se com os dados requisitados para degustar de todos os nossos produtos</p>
+                    <button class="hidden botao" id="register">
+                        Cadastrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {{#if returnMsg }}
+     <p class="tituloCadastro"style="color:red;">Cpf já cadastrado em nosso banco de dados</p>
+    {{/if}}
+    {{#if sucess}}
+        <p class="tituloCadastro" style="color: green;">Cadastro Realizado com sucesso</p>
+    {{/if}}

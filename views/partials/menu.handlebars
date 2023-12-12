@@ -1,4 +1,8 @@
 <header>
-    <h3 class="titulo">ADEGA SENAI</h3>
-    <h3 class="cadastrese">Cadastre-se/Login</h3>
+      <div class="titulo">ADEGA SENAI</div>
+         {{#if dataClient}}
+              <div class="welcome-message">seja bem vindo {{dataClient.nome}}</div>
+              {{else}}
+              <div class="cadastro"><a href="/cadastro" class="login">Cadastre-se/Login</a></div>
+          {{/if}}
 </header>

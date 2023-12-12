@@ -1,1 +1,9 @@
-[{"id":1,"nome":"Admin","cpf":"000.000.000-00","DataNasc":"00/00/0000","email":null,"senha":"admin123"}]
+ {
+    "nome": "Admin",
+    "cpf": "Admin",
+    "email": "none",
+    "senha": "Admin",
+    "id": 1,
+    "funcionario": true,
+    "permissao":true
+}
