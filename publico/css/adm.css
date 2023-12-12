@@ -1,3 +1,6 @@
 body{
-    background-color: purple;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: blue;
 }
