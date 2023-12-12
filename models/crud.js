@@ -1,23 +1,19 @@
+const { Console } = require('console');
 const fs = require('fs');
 
 const crud  = {
     myData:[],
-    read(filePath,secondFilePath){
+    read(filePath='',secondFilePath=''){
       let dataReturn;
       if (filePath && secondFilePath) {
-        if(filePath && secondFilePath) {
           if(fs.existsSync(filePath && secondFilePath)){
           this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
-          this.myData.push  (JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'})))
+          this.myData.push (JSON.parse(fs.readFileSync(secondFilePath,{encoding:'utf-8'})))
           dataReturn = crud.myData
-          }
         }
-      } 
-    
-      if (filePath) {
+      } else {
         if(fs.existsSync(filePath)){
           this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
-          console.log(this.myData)
           dataReturn = crud.myData;
       }
       }
@@ -55,7 +51,8 @@ const crud  = {
     validaLogin (cpf,senha) {
       let clientFounded = false;
        this.myData.forEach((el) => {
-          if (cpf == el.cpf && senha == el.senha) {
+          if (el.cpf == cpf && el.senha == senha) {
+            console.log(el)
              clientFounded = el
           }
         })
