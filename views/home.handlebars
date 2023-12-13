@@ -3,5 +3,32 @@
 {{/section}}
 
 
+<div class="carousel">
+    <div class="slide">
+        <img src="img/carrossel/img1.jpg" alt="Imagem 1">
+    </div>
+    <div class="slide">
+        <img src="img/carrossel/img2.jpg" alt="Imagem 2">
+    </div>
+    <div class="slide">
+        <img src="img9.png" alt="Imagem 3">
+    </div>
+</div>
+
+    {{#if Produto}}
+<div class="grid">
+    {{#each Produto}}
+        <form class="item" action="/carrinho">
+            <img src="{{img}}" alt=""><h3>{{nome}}</h3><h2>{{preco}}</h2>
+            <input type="submit">
+        </form> 
+    {{/each}}
+    </div>
+    {{/if}}
+
+
+
+
+
 
 
