@@ -1,6 +1,7 @@
 const Pessoa = require('./Pessoa');
 const Cliente = require('./Cliente');
 
+
 class Adm extends Pessoa {
     #permissao
     #funcionario

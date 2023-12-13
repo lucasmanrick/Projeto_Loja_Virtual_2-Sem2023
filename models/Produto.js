@@ -4,10 +4,8 @@ class Produto {
     this.nome = nome;
     this.preco= preço;
     this.estoque += estoque;
-    this.descricao = descricao
     this.imagemProduto = imagemProduto
     this.ativo = 1
   }
 }
-
-module.exports = {Produto}
+module.exports = Produto;

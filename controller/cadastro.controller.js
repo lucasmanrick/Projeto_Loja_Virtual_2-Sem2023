@@ -34,7 +34,6 @@ const loginEnter = (req,res) => {
       res.render('cadastro')
   }
 }
-
   const loginLogout = (req,res) => {
     const clientLog = crud.read('./data/logado.JSON')
     const productsReceive = [{nome:'vinho',preco:'10r$',img:'/img/cerveja/img1.png',id:1}];
