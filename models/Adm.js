@@ -1,6 +1,7 @@
 const Pessoa = require('./Pessoa');
 const Cliente = require('./Cliente');
 
+
 class Adm extends Pessoa {
     #permissao
     #funcionario
@@ -31,10 +32,6 @@ class Adm extends Pessoa {
                 returnMessage = 'invalid modifications'
             }
         }
+        return returnMessage
     }   
 }
-
-const newClient = new Cliente('Lucas',49222231234,'03/07/2003','Lucasmanrick.ipsm@gmail.com','Lukinha123');
-
-
-

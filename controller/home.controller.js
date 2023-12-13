@@ -1,5 +1,16 @@
+const crud = require("../models/crud");
+const filePath = './data/logado.JSON'
+const productsPath = './data/produtos.JSON'
+
 const home = (req, res) => {
-    res.render('home'); 
+    const existClient = crud.read(filePath)
+    const productsReceive = crud.read (productsPath)
+        if(existClient) {
+            console.log(productsReceive)
+           res.render('home',{dataClient:existClient,Produto:productsReceive}); 
+        }else {
+            res.render('home',{Produto:productsReceive})
+        }
 };
 
-module.exports = { home};
+module.exports = {home};
