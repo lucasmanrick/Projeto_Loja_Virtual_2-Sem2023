@@ -18,53 +18,49 @@ body{
   border-radius: 8px; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   overflow: hidden;
-  position: absolute; 
+  position: fixed; 
   top: 100px;
   left: 300px;
-  z-index: 3;
-  
 }
 
 
 
 .slide {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1200px;
-  height: auto;
+  height: 200px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   
 }
 
 .slide:nth-child(1) {
-  animation: slideAnimation 20s infinite 0s;
+  animation: slideAnimation 9s infinite 0s;
 }
 
 .slide:nth-child(2) {
-  animation: slideAnimation 20s infinite 5s; /* Ajuste o delay conforme necessário */
+  animation: slideAnimation 10s infinite 0s; /* Ajuste o delay conforme necessário */
 }
 
 .slide:nth-child(3) {
-  animation: slideAnimation 20s infinite 9s; /* Ajuste o delay conforme necessário */
+  animation: slideAnimation 10s infinite 0ms; /* Ajuste o delay conforme necessário */
 }
 
 
 @keyframes slideAnimation {
   0% {
     opacity: 1;
-    transform: translateX(300%);
+    transform: translateX(200%);
   }
   100% {
     opacity: 1;
-    transform: translateX(-300%);
+    transform: translateX(-100%);
   }
 }
 
 .carousel img {
   width: 100%;
   height: auto;
+  
 }
 
 

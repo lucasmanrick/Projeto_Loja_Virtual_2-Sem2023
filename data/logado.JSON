@@ -1,1 +1,1 @@
-{"nome":"lucas manrick","cpf":"123123123123","email":"123123123@asdiofjas","senha":"123123123123","id":1,"funcionario":false,"permissao":false}
+{"nome":"Admin","imagem":"Admin","cpf":"Admin","email":"none","senha":"Admin","id":1,"funcionario":true,"permissao":true}

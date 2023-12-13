@@ -33,8 +33,15 @@ const loginEnter = (req,res) => {
   }else{
       res.render('cadastro')
   }
-
+}
+  const loginLogout = (req,res) => {
+    const clientLog = crud.read('./data/logado.JSON')
+    const productsReceive = [{nome:'vinho',preco:'10r$',img:'/img/cerveja/img1.png',id:1}];
+    if(clientLog) {
+      crud.deletarArquivo('./data/logado.JSON')
+      res.render('home',{Product:productsReceive})
+    }
 }
 
 
-module.exports = { cadastro, clientRegister, loginEnter}
+module.exports = { cadastro, clientRegister, loginEnter,loginLogout}

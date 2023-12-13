@@ -32,9 +32,6 @@ class Adm extends Pessoa {
                 returnMessage = 'invalid modifications'
             }
         }
+        return returnMessage
     }   
 }
-
-
-
-
