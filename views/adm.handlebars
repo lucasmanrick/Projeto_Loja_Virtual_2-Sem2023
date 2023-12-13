@@ -3,10 +3,72 @@
 {{/section}}
 
 {{#if dataClient.permissao}}
-    <div class='container'>
-        <form action="/modifyPermission">
+<div class='container'>
+    <form action="/modifyPermission">
+    </form>
+</div>
+{{else}}
+<H1>Pagina não permitida</H1>
+{{/if}}
+
+<div class="container">
+    <div class="editarPerfil">
+        <a href="#" onclick="editarPerfil()"><i class="material-symbols-outlined">Edit</i>EDITAR PERFIL</a>
+
+
+    </div>
+
+    <div class="criarProduto">
+        <a href="#" onclick=""><span class="material-symbols-outlined">add</span>ADICIONAR NOVO PRODUTO</a>
+        </span>
+
+    </div>
+</div>
+
+<div class="form-container">
+    <div class="formeditperfil">
+        <form id="editForm" class="form">
+            <input type="text" id="cpf" placeholder="Informe o CPF">
+            <button type="button" class="botao">Pesquisar</button>
+
+            <div class="selectperm">
+                <label for="permissaoAdm" class="texto">PERMISSÃO PARA ADM:</label>
+                <select id="permissaoAdm">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+
+            </div>
+
+
+            <div class="selectfun">
+                <label for="funcionario" class="texto">FUNCIONARIO:</label>
+                <select id="funcionario">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+
+            </div>
+
+            <button class="botao">SALVAR</button>
         </form>
     </div>
-    {{else}}
-    <H1>Pagina não permitida</H1>
-{{/if}}
+
+
+    <div class="formcriarproduto">
+        <form id="formproduto" class="form">
+            <label for="" class="texto">INFORME A DESCRIÇÃO DO PRODUTO:</label>
+            <input type="text" id="produto">
+
+            <label for="" class="texto">INFORME O VALOR DO PRODUTO:</label>
+            <input type="text" id="produto">
+
+            <label for="" class="texto">INFORME A QUANTIDADE:</label>
+            <input type="text" id="produto">
+
+            <label for="" class="texto">INFORME O CAMINHO DA IMAGEM:</label>
+            <input type="text" id="produto">
+            <button class="botao">SALVAR</button>
+        </form>
+    </div>
+</div>
