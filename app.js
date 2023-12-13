@@ -36,9 +36,8 @@ app.get('/alcoolica',alcoolicaController.alcoolica)
 app.get('/cadastro', cadastroController.cadastro)
 app.post ('/clientRegister', cadastroController.clientRegister)
 app.post ('/loginEnter',cadastroController.loginEnter)
-app.get('/carrinho', carrinhoController.carrinho)
+app.get('/carrinho/:id', carrinhoController.carrinho)
 app.get('/nao-alcoolicas', naoAlcoolicasController.naoAlcoolicas)
-
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}👍`);
 })
