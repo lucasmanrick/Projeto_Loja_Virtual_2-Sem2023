@@ -4,8 +4,8 @@ const Adm = require('../models/Adm');
 const crud = require("../models/crud");
 const filePath = './data/clientes.JSON';
 const secondFilePath = './data/adm.JSON';
-const crud = require("../models/crud");
-const filePath = './data/logado.JSON'
+
+
 
 const adm = (req, res) => {
    const existClient = crud.read(filePath)
