@@ -37,4 +37,5 @@ const loginEnter = (req,res) => {
 
 }
 
+
 module.exports = { cadastro, clientRegister, loginEnter}
