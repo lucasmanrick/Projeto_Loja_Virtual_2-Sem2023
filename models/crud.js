@@ -9,7 +9,6 @@ const crud  = {
           this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
           this.myData.push (JSON.parse(fs.readFileSync(secondFilePath,{encoding:'utf-8'})))
           dataReturn = crud.myData
-          console.log(dataReturn)
         }
       } else {
          if(fs.existsSync(filePath)){

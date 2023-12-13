@@ -3,8 +3,8 @@ class Venda {
    data
    valorTotal
 
-    constructor(id, data, valor) {
-        this.id = id;
+    constructor(data, valor) {
+        this.id = null;
         this.data = data;
         this.valorTotal = valor;
         this.items = [];
