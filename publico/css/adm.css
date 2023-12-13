@@ -1,3 +1,99 @@
-body{
-    background-color: purple;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40vh;
+    width: 100vh;
+    border-radius: 30px;
+
+}
+
+.form-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150vh;
+    height: 50vh;
+    
+   
+
+}
+
+.editarPerfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    height: 15vh;
+    width: 30vh;
+    color: white;
+
+}
+
+.criarProduto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    height: 15vh;
+    width: 30vh;
+
+}
+
+.editar {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.formeditperfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 20px;
+    height: 50vh;
+    width: 60vh;
+}
+
+.formcriarproduto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 20px;
+    height: 50vh;
+    width: 60vh;
+
+}
+
+
+.botao {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.texto {
+    font-weight: bold; 
+    color: #ffffff;
+    font-size: 16px; 
+
+  }
+  

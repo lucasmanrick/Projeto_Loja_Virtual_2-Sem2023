@@ -35,7 +35,6 @@ class Adm extends Pessoa {
     }   
 }
 
-const newClient = new Cliente('Lucas',49222231234,'03/07/2003','Lucasmanrick.ipsm@gmail.com','Lukinha123');
 
 
 

@@ -5,6 +5,7 @@ class Venda {
       this.valorTotal = valor;
       this.items = [];
       this.quantidade = {}; // Armazena as quantidades dos produtos
+
     }
   
     adicionarAoCarrinho(item) {

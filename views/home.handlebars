@@ -15,6 +15,17 @@
     </div>
 </div>
 
+    {{#if Produto}}
+<div class="grid">
+    {{#each Produto}}
+        <form class="item" action="/carrinho">
+            <img src="{{img}}" alt=""><h3>{{nome}}</h3><h2>{{preco}}</h2>
+            <input type="submit">
+        </form> 
+    {{/each}}
+    </div>
+    {{/if}}
+
 
 
 

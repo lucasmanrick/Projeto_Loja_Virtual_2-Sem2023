@@ -1,8 +1,18 @@
-const Venda = require('../models/Venda'); // Importe o modelo do carrinho se houver
-const Produto = require('../models/Produto'); // Importe o modelo do produto se houver
+
+const { Venda } = require("../models/Venda");
+const crud = require("../models/crud");
+const filePath = './data/logado.JSON'
+
 
 const carrinho = (req, res) => {
-    res.render('carrinho')
+   const existClient = crud.read(filePath)
+   if(existClient) {
+      crud.read('./data/carrinho.JSON')
+      const newCart = new Venda (req.body)
+      res.render('carrinho',{dataClient:existClient})
+   }else {
+      res.render('cadastro')
+   }
 }
 const adicionarItem = async (req, res) => {
     const { produtoId, quantidade } = req.body;
