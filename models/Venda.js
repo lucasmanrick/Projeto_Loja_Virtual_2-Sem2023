@@ -4,7 +4,7 @@ class Venda {
       this.data = data;
       this.valorTotal = valor;
       this.items = [];
-      this.quantidade = {}; // Armazena as quantidades dos produtos
+      this.quantidade += 0; // Armazena as quantidades dos produtos
 
     }
   
@@ -45,5 +45,5 @@ class Venda {
     }
   }
   
-  module.exports = Venda;
+module.exports = Venda
   
