@@ -19,70 +19,26 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              {{#each dataCart.items}}
+                <tr>
                 <th scope="row">
                   <div class="d-flex align-items-center">
-                    <img src="img/vodka/absolute1.png" class="img-fluid rounded-3" style="width: 120px;" alt="Book">
+                    <img src="{{imagemProduto}}" class="img-fluid rounded-3" style="width: 120px;" alt="Book">
                     <div class="flex-column ms-4">
-                      <p class="mb-2">Absolut</p>
-                      <p class="mb-0">Vodka</p>
+                      <p class="mb-2">{{nome}}</p>
                     </div>
                   </div>
                 </th>
                 <td class="align-middle">
-                  <p class="mb-0" style="font-weight: 500;">Alcoólica</p>
-                </td>
+                  <p class="mb-0" style="font-weight: 500;">{{#if Alcoolico}}Alcoolico {{else}}Não Alcoolico{{/if}}</p>
+                </td>       
                 <td class="align-middle">
-                  <div class="d-flex flex-row">
-                    <button class="btn btn-link px-2"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                      <i class="fas fa-minus"></i>
-                    </button>
-
-                    <input id="form1" min="0" name="quantity" value="2" type="number"
-                      class="form-control form-control-sm" style="width: 50px;" />
-
-                    <button class="btn btn-link px-2"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                      <i class="fas fa-plus"></i>
-                    </button>
-                  </div>
-                </td>
-                <td class="align-middle">
-                  <p class="mb-0" style="font-weight: 500;">R$24.50</p>
+                  <p class="mb-0" style="font-weight: 500;">R${{preco}}</p>
                 </td>
               </tr>
               <tr>
-                <th scope="row" class="border-bottom-0">
-                  <div class="d-flex align-items-center">
-                    <img src="img/vodka/Smirnoff.png" class="img-fluid rounded-3" style="width: 120px;" alt="Book">
-                    <div class="flex-column ms-4">
-                      <p class="mb-2">Smirnoff</p>
-                      <p class="mb-0">Vodka</p>
-                    </div>
-                  </div>
-                </th>
-                <td class="align-middle border-bottom-0">
-                  <p class="mb-0" style="font-weight: 500;">Alcoólica</p>
-                </td>
-                <td class="align-middle border-bottom-0">
-                  <div class="d-flex flex-row">
-                    <button class="btn btn-link px-2"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                      <i class="fas fa-minus"></i>
-                    </button>
-                    <input id="form1" min="0" name="quantity" value="1" type="number"
-                      class="form-control form-control-sm" style="width: 50px;" />
-                    <button class="btn btn-link px-2"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                      <i class="fas fa-plus"></i>
-                    </button>
-                  </div>
-                </td>
-                <td class="align-middle border-bottom-0">
-                  <p class="mb-0" style="font-weight: 500;">R$32.90</p>
-                </td>
-              </tr>
+              {{/each}}
+            
             </tbody>
           </table>
         </div>
@@ -160,18 +116,18 @@
               <div class="col-lg-4 col-xl-3">
                 <div class="d-flex justify-content-between" style="font-weight: 500;">
                   <p class="mb-2">Subtotal</p>
-                  <p class="mb-2">R$57.40</p>
+                  <p class="mb-2">{{dataCart.valorTotal}}</p>
                 </div>
 
                 <div class="d-flex justify-content-between" style="font-weight: 500;">
                   <p class="mb-0">Frete</p>
-                  <p class="mb-0">R$6.99</p>
+                  <p class="mb-0">Gratuito</p>
                 </div>
                 <hr class="my-4">
 
                 <div class="d-flex justify-content-between mb-4" style="font-weight: 500;">
                   <p class="mb-2">Total (Envio Incluso)</p>
-                  <p class="mb-2">R$64.39</p>
+                  <p class="mb-2">{{dataCart.valorTotal}}</p>
                 </div>
 
                 <button type="button" class="btn btn-primary btn-block btn-lg">

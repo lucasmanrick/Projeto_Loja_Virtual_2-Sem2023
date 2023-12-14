@@ -1,25 +1,29 @@
 class Venda {
-    constructor(id, data, valor,items) {
+    constructor(id, data) {
       this.id = id;
       this.data = data;
-      this.valorTotal = valor;
-      this.items = [items];
+      this.valorTotal = 0;
+      this.items = [];
       this.quantidade = []; // Armazena as quantidades dos produtos
     }
   
     adicionarAoCarrinho (item) {
 
-      let receiveStatus;
+      let receiveStatus = false;
       this.items.forEach((el) => {
         if (el.id === item.id) {
-          receiveStatus = el.id
+          receiveStatus = true
         }
       })
-      if(receiveStatus) {
-        this.quantidade.push (receiveStatus)
+      if(receiveStatus === true) {
+        this.quantidade.forEach((el) => {
+         if(el.nameObject == item.nome) {
+          el.quantieItem += 1
+         }
+        })
       }else {
         this.items.push(item)
-        this.quantidade.push(item.id)
+        this.quantidade.push ({nameObject:item.nome,quantieItem:item.id,price:item.preco})
       }
     }
   
@@ -34,26 +38,24 @@ class Venda {
       }
     }
   
-    atualizarQuantidadeDoProduto(produto, quantidade) {
-      if (this.items.some(item => item.id === produto.id) && quantidade > 0) {
-        this.quantidade[produto.id] = quantidade;
-        console.log('Quantidade alterada com sucesso');
-      } else {
-        console.log('Erro na alteração de quantidade');
+    atualizarQuantidadeDoProduto(item) {
+      let quantieStorage = [];
+      this.quantidade.forEach((el) => {
+        if(el === item.id) {
+          quantieStorage.push (el)
+        }
+      })
+      if(quantieStorage.length > 0) {
+        return quantieStorage.length
       }
     }
-  
-    mostrarCarrinho() {
-      console.log("Itens no carrinho:");
-      for (let item of this.items) {
-        console.log(`${item.nome} - Quantidade: ${this.quantidade[item.id]}`);
-      }
-    } 
 
     atualizarValorTotal () {
-      this.items.forEach((el) => {
-        this.valorTotal += el.preco
-      })
+      this.valorTotal = 0;
+        this.quantidade.forEach((e) => {
+          let takeResult = e.quantieItem * e.price
+          this.valorTotal += takeResult
+          })
     }
   }
   
