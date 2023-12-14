@@ -50,15 +50,14 @@ header {
 
 nav.manu-lateral{
   position: fixed;
-  width: 100px;
+  width: 160px;
   height: 100%;
   background-color: #000000;
-  padding-top: 40px;
   box-shadow: 3px 0 0 #898989;
   top: 0;
   left: 0;
-}
 
+}
 
 ul{
   height: 100%;
@@ -67,11 +66,12 @@ ul{
 
 ul li.item-menu a{
   display: flex;
+  text-decoration: none;
   justify-content: center;
   color: white;
   padding: 20px 1%;
   margin-bottom: 20px;
-  line-height: 45px;
+  line-height: 30px;
 }
 
 ul li.item-menu:hover{
@@ -87,4 +87,9 @@ font-size: 30px;
 
 ul{
   padding: 0%;
+}
+a{
+  display: flex;
+  align-items: center;
+  
 }
