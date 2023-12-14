@@ -72,7 +72,7 @@ const crud  = {
       let returnProduct;
       this.myData.forEach((el) => {
         if(el.id === id) {
-          return el
+          returnProduct = el
         }
       })
       return returnProduct

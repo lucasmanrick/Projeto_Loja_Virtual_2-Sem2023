@@ -1,19 +1,25 @@
 class Venda {
-    constructor(id, data, valor) {
+    constructor(id, data, valor,items) {
       this.id = id;
       this.data = data;
       this.valorTotal = valor;
-      this.items = [];
-      this.quantidade += 0; // Armazena as quantidades dos produtos
-
+      this.items = [items];
+      this.quantidade = []; // Armazena as quantidades dos produtos
     }
   
-    adicionarAoCarrinho(item) {
-      if (!this.items.includes(item)) {
-        this.items.push(item);
-        this.quantidade[item.id] = 1; // Define a quantidade inicial como 1 para cada produto adicionado
-      } else {
-        this.quantidade[item.id] += 1; // Incrementa a quantidade se o item já estiver no carrinho
+    adicionarAoCarrinho (item) {
+
+      let receiveStatus;
+      this.items.forEach((el) => {
+        if (el.id === item.id) {
+          receiveStatus = el.id
+        }
+      })
+      if(receiveStatus) {
+        this.quantidade.push (receiveStatus)
+      }else {
+        this.items.push(item)
+        this.quantidade.push(item.id)
       }
     }
   
@@ -42,8 +48,14 @@ class Venda {
       for (let item of this.items) {
         console.log(`${item.nome} - Quantidade: ${this.quantidade[item.id]}`);
       }
+    } 
+
+    atualizarValorTotal () {
+      this.items.forEach((el) => {
+        this.valorTotal += el.preco
+      })
     }
   }
   
-module.exports = Venda
+module.exports = {Venda}
   
