@@ -19,15 +19,13 @@ class Venda {
         if(this.quantidade.length > 0) {
           this.quantidade.forEach((el) => {
             if(el.nameObject == item.nome) {
-             el.quantieItem += 1
+              el.quantieItem += 1
             }
-           })
+          })
         }  
       }else {
-        console.log('adicionado a items e quantia')
-        console.log(this.quantidade)
         this.items.push(item)
-        this.quantidade.push ({nameObject:item.nome,quantieItem:item.id,price:item.preco})
+        this.quantidade.push ({nameObject:item.nome,quantieItem:1,price:item.preco})
       }
     }
   
