@@ -3,6 +3,7 @@
 {{/section}}
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 <div class="elfsight-app-6d9f83e9-ec51-4b5d-8af4-5efb72248213" data-elfsight-app-lazy></div>
+
     {{#if Produto}}
     <div class="grid">
     {{#each Produto}}
@@ -10,7 +11,6 @@
             <img src="{{imagemProduto}}" alt="">
             <h3>{{nome}}</h3>
             <h2>R$ {{preco}}</h2>
-            {{!-- <input type="submit" name="itemId" id="{{id}}" value="adicionarItem"> --}}
             <a method="post" href="/carrinhoAdd/{{id}}"><input type="button" value="Adicionar ao Carrinho"></a>
         </div> 
     {{/each}}
