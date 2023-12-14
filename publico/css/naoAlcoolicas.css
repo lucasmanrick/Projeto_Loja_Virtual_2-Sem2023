@@ -1,6 +1,7 @@
 body {
     display: flex;
     justify-content: flex-start;
+<<<<<<< HEAD
   
     background-color: rgb(255, 255, 255);
   
@@ -11,13 +12,24 @@ body {
   
   
   .grid {
+=======
+    background-color: rgb(255, 255, 255);
+}
+.grid {
+>>>>>>> 5972f4370d9b8269a870fdec06c4d981b00a36d5
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 100px;
     margin-left: -50px;
+<<<<<<< HEAD
   }
   
   .item {
+=======
+}
+
+.item {
+>>>>>>> 5972f4370d9b8269a870fdec06c4d981b00a36d5
     display: grid;
     justify-content: center;
     align-items: flex-start;
@@ -29,6 +41,7 @@ body {
     overflow: hidden;
     transition: 100ms;
     border: 1px solid white;
+<<<<<<< HEAD
   }
   
     .item:hover{
@@ -43,18 +56,47 @@ body {
   }
   .item h3{
    
+=======
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+.item img {
+    padding-left: 20%;
+    width: 80%;
+    height: 80%;
+    color: white;
+}
+
+.item h3 {
+
+>>>>>>> 5972f4370d9b8269a870fdec06c4d981b00a36d5
     font-size: 1em;
     width: 100%;
     height: 100%;
     color: white;
+<<<<<<< HEAD
   }
   .item h2{
+=======
+}
+
+.item h2 {
+>>>>>>> 5972f4370d9b8269a870fdec06c4d981b00a36d5
     font-size: 1em;
     width: 100%;
     height: 100%;
     color: white;
+<<<<<<< HEAD
   }
   .item input{
+=======
+}
+
+.item input {
+>>>>>>> 5972f4370d9b8269a870fdec06c4d981b00a36d5
     width: 100%;
     height: 100%;
     color: rgb(0, 0, 0);
@@ -62,4 +104,8 @@ body {
     text-transform: uppercase;
     font-weight: bolder;
     border: 1px solid blue;
+<<<<<<< HEAD
   }
+=======
+}
+>>>>>>> 5972f4370d9b8269a870fdec06c4d981b00a36d5
