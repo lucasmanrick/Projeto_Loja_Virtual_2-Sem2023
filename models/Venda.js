@@ -1,19 +1,32 @@
 class Venda {
-    constructor(id, data, valor) {
+    constructor(id, data) {
       this.id = id;
       this.data = data;
-      this.valorTotal = valor;
+      this.valorTotal = 0;
       this.items = [];
-      this.quantidade = {}; // Armazena as quantidades dos produtos
-
+      this.quantidade = []; // Armazena as quantidades dos produtos
+      this.desconto = 0;
     }
   
-    adicionarAoCarrinho(item) {
-      if (!this.items.includes(item)) {
-        this.items.push(item);
-        this.quantidade[item.id] = 1; // Define a quantidade inicial como 1 para cada produto adicionado
-      } else {
-        this.quantidade[item.id] += 1; // Incrementa a quantidade se o item já estiver no carrinho
+    adicionarAoCarrinho (item) {
+      let receiveStatus = false;
+      this.items.forEach((el) => {
+        if (el.id === item.id) {
+          receiveStatus = true
+        }
+      })
+
+      if(receiveStatus == true) {
+        if(this.quantidade.length > 0) {
+          this.quantidade.forEach((el) => {
+            if(el.nameObject == item.nome) {
+              el.quantieItem += 1
+            }
+          })
+        }  
+      }else {
+        this.items.push(item)
+        this.quantidade.push ({nameObject:item.nome,quantieItem:1,price:item.preco})
       }
     }
   
@@ -28,22 +41,34 @@ class Venda {
       }
     }
   
-    atualizarQuantidadeDoProduto(produto, quantidade) {
-      if (this.items.some(item => item.id === produto.id) && quantidade > 0) {
-        this.quantidade[produto.id] = quantidade;
-        console.log('Quantidade alterada com sucesso');
-      } else {
-        console.log('Erro na alteração de quantidade');
+    atualizarQuantidadeDoProduto(item) {
+      let quantieStorage = [];
+      this.quantidade.forEach((el) => {
+        if(el === item.id) {
+          quantieStorage.push (el)
+        }
+      })
+      if(quantieStorage.length > 0) {
+        return quantieStorage.length
       }
     }
-  
-    mostrarCarrinho() {
-      console.log("Itens no carrinho:");
-      for (let item of this.items) {
-        console.log(`${item.nome} - Quantidade: ${this.quantidade[item.id]}`);
-      }
+
+    atualizarValorTotal () {
+      this.valorTotal = 0;
+        this.quantidade.forEach((e) => {
+          let takeResult = e.quantieItem * e.price
+          this.valorTotal = this.valorTotal + takeResult
+          })
+          if(this.valorTotal > 50) {
+            this.valorTotal -= 10
+            this.desconto = 10
+          }
+          if(this.valorTotal >= 100) {
+            this.valorTotal -=10
+            this.desconto = 20
+          }
     }
   }
   
-  module.exports = Venda;
+module.exports = {Venda}
   

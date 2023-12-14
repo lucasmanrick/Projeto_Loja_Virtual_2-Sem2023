@@ -3,6 +3,7 @@ const Pessoa = require("../models/Pessoa")
 const crud = require("../models/crud")
 const filePath = './data/clientes.JSON'
 const secondFilePath = './data/adm.JSON'
+const productsPath = './data/produtos.JSON'
 
 const cadastro = (req, res) => {
     res.render('cadastro')
@@ -36,7 +37,7 @@ const loginEnter = (req,res) => {
 }
   const loginLogout = (req,res) => {
     const clientLog = crud.read('./data/logado.JSON')
-    const productsReceive = [{nome:'vinho',preco:'10r$',img:'/img/cerveja/img1.png',id:1}];
+    const productsReceive = crud.read (productsPath)
     if(clientLog) {
       crud.deletarArquivo('./data/logado.JSON')
       res.render('home',{Product:productsReceive})
