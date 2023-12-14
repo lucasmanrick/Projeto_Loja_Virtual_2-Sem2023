@@ -1,7 +1,10 @@
+
+
 body{
   display: flex;
   justify-content: center;
 }
+
 
 
 header {
@@ -45,39 +48,43 @@ header {
   color: black;
 }
 
-.sidebar {
-
-  display: flex;
-  flex-direction: column;
-  background-color: beige;
-  width: 120px;
+nav.manu-lateral{
   position: fixed;
+  width: 100px;
+  height: 100%;
+  background-color: #000000;
+  padding-top: 40px;
+  box-shadow: 3px 0 0 #898989;
   top: 0;
-  bottom: 0;
   left: 0;
-  padding-bottom: 9999px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-
 }
 
-.sidebar h2 {
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 10px;
+
+ul{
+  height: 100%;
+  list-style-type: none;
 }
 
-.sidebar p {
-  color: #666;
-  line-height: 1.6;
+ul li.item-menu a{
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 20px 1%;
+  margin-bottom: 20px;
+  line-height: 45px;
 }
 
-.carrinho {
-  width: 20vh;
-  height: 10vh;
-  position: absolute;
-  bottom: 1px;
-  left: 1PX;
-  position: fixed;
-
+ul li.item-menu:hover{
+  display: flex;
+  justify-content: center;
+  background-color: #646464 ;
+  border-radius: 5px;
 }
 
+ul li.item-menu a .icon > i{
+font-size: 30px;
+}
+
+ul{
+  padding: 0%;
+}
