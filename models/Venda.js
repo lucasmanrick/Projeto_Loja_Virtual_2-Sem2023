@@ -8,20 +8,24 @@ class Venda {
     }
   
     adicionarAoCarrinho (item) {
-
       let receiveStatus = false;
       this.items.forEach((el) => {
         if (el.id === item.id) {
           receiveStatus = true
         }
       })
-      if(receiveStatus === true) {
-        this.quantidade.forEach((el) => {
-         if(el.nameObject == item.nome) {
-          el.quantieItem += 1
-         }
-        })
+
+      if(receiveStatus == true) {
+        if(this.quantidade.length > 0) {
+          this.quantidade.forEach((el) => {
+            if(el.nameObject == item.nome) {
+             el.quantieItem += 1
+            }
+           })
+        }  
       }else {
+        console.log('adicionado a items e quantia')
+        console.log(this.quantidade)
         this.items.push(item)
         this.quantidade.push ({nameObject:item.nome,quantieItem:item.id,price:item.preco})
       }
@@ -54,7 +58,7 @@ class Venda {
       this.valorTotal = 0;
         this.quantidade.forEach((e) => {
           let takeResult = e.quantieItem * e.price
-          this.valorTotal += takeResult
+          this.valorTotal = this.valorTotal + takeResult
           })
     }
   }

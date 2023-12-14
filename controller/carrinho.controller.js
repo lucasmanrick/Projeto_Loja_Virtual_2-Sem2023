@@ -23,10 +23,9 @@ const carrinhoAdd = (req, res) => {
         crud.myData.splice(0,crud.myData.length)
         let checkCart = crud.read('./data/carrinho.JSON')
         if(checkCart) {
-          console.log(crud.myData)
           const newCart = new Venda (crud.myData[0].id,crud.myData[0].data) 
+          newCart.items = crud.myData[0].items  
           newCart.quantidade = crud.myData[0].quantidade
-          newCart.items = crud.myData[0].items
           newCart.adicionarAoCarrinho(receiveProduct)
           newCart.atualizarValorTotal()
           crud.myData.splice(0,crud.myData.length)
