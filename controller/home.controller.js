@@ -6,7 +6,6 @@ const home = (req, res) => {
     const existClient = crud.read(filePath)
     const productsReceive = crud.read (productsPath)
         if(existClient) {
-            console.log(productsReceive)
            res.render('home',{dataClient:existClient,Produto:productsReceive}); 
         }else {
             res.render('home',{Produto:productsReceive})
