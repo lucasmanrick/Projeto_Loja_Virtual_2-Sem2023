@@ -5,6 +5,7 @@ class Venda {
       this.valorTotal = 0;
       this.items = [];
       this.quantidade = []; // Armazena as quantidades dos produtos
+      this.desconto = 0;
     }
   
     adicionarAoCarrinho (item) {
@@ -58,6 +59,14 @@ class Venda {
           let takeResult = e.quantieItem * e.price
           this.valorTotal = this.valorTotal + takeResult
           })
+          if(this.valorTotal > 50) {
+            this.valorTotal -= 10
+            this.desconto = 10
+          }
+          if(this.valorTotal >= 100) {
+            this.valorTotal -=10
+            this.desconto = 20
+          }
     }
   }
   
