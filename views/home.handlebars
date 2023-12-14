@@ -3,17 +3,7 @@
 {{/section}}
 
 
-<div class="carousel">
-    <div class="slide">
-        <img src="img/carrossel/img1.jpg" alt="Imagem 1">
-    </div>
-    <div class="slide">
-        <img src="img/carrossel/img2.jpg" alt="Imagem 2">
-    </div>
-    <div class="slide">
-        <img src="img9.png" alt="Imagem 3">
-    </div>
-</div>
+
 
     {{#if Produto}}
     <div class="grid">
@@ -21,7 +11,7 @@
         <div class="item">
             <img src="{{imagemProduto}}" alt="">
             <h3>{{nome}}</h3>
-            <h2>{{preco}}</h2>
+            <h2>R$ {{preco}}</h2>
             {{!-- <input type="submit" name="itemId" id="{{id}}" value="adicionarItem"> --}}
             <a method="post" href="/carrinhoAdd/{{id}}"><input type="button" value="Adicionar ao Carrinho"></a>
         </div> 
