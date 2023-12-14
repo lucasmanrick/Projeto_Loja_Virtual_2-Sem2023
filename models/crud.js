@@ -9,7 +9,6 @@ const crud  = {
           this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
           this.myData.push (JSON.parse(fs.readFileSync(secondFilePath,{encoding:'utf-8'})))
           dataReturn = crud.myData
-          console.log(dataReturn)
         }
       } else {
          if(fs.existsSync(filePath)){
@@ -67,6 +66,16 @@ const crud  = {
         if(err) throw err;
         console.log('Arquivo Deletado')
       })
+    },
+
+    procurarProduto (id) {
+      let returnProduct;
+      this.myData.forEach((el) => {
+        if(el.id === id) {
+          returnProduct = el
+        }
+      })
+      return returnProduct
     }
 }
 module.exports = crud 

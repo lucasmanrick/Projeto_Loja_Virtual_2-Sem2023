@@ -1,15 +1,38 @@
-<aside class="sidebar">
+<aside class="manu-lateral">
 
-    <div class="home">
-        <a href="/"><i class="material-symbols-outlined">HOME</i></a>
-    </div>
-   
     <a href="/alcoolica">Alcolicas</a>
     <a href="/nao-alcoolicas">Nao alcolicas</a>
     {{#if dataClient.permissao}}
-        <a href="/adm">ADM</a>
+    <a href="/adm">ADM</a>
     {{/if}}
-    <div class="carrinho">
-        <a href="/carrinho"><i class="fa-solid fa-cart-shopping">Carrinho</i></a>
-    </div>
-</aside>
+
+    <nav class="manu-lateral">
+        <ul>
+            <li class="item-menu">
+                <a href="/">
+                    <span class="icon"><i class="bi bi-house-door"></i></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="/carrinho">
+                    <span class="icon"><i class="bi bi-cart4"></i></i></span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="/adm">
+                    <span class="icon"><i class="bi bi-person-circle"></i></span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-box-arrow-right"></i></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</aside>    
+
+<script src="js/alcoolica1.js"></script>

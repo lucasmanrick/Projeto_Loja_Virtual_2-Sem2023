@@ -39,7 +39,8 @@ app.get('/alcoolica',alcoolicaController.alcoolica)
 app.get('/cadastro', cadastroController.cadastro)
 app.post ('/clientRegister', cadastroController.clientRegister)
 app.post ('/loginEnter',cadastroController.loginEnter)
-app.get('/carrinho/:id', carrinhoController.carrinho)
+app.get('/carrinho',carrinhoController.carrinho)
+app.get('/carrinhoAdd/:id', carrinhoController.carrinhoAdd)
 app.get('/nao-alcoolicas', naoAlcoolicasController.naoAlcoolicas)
 
 app.use(function(req,res){
