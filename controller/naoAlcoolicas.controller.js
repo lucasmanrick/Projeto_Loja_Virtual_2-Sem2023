@@ -13,4 +13,5 @@ const naoAlcoolicas = (req, res) => {
     }
 }
 
+
 module.exports = { naoAlcoolicas };
