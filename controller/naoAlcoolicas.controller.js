@@ -9,7 +9,7 @@ const naoAlcoolicas = (req, res) => {
     if (existClient) {
         res.render('naoAlcoolicas', { dataClient: existClient, Produto: produtosNaoAlcoolicos });
     } else {
-        res.render('naoAlcoolicas', { Produto: productsReceive });
+        res.render('naoAlcoolicas', { Produto: produtosNaoAlcoolicos });
     }
 }
 
