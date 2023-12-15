@@ -29,6 +29,7 @@ body {
   text-align: center;
   transition: 100ms;
   border: 1px solid white;
+
 }
 
 .item:hover {
