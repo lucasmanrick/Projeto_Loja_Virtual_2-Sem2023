@@ -6,7 +6,7 @@ const crud  = {
       let dataReturn;
       if (filePath && secondFilePath) {
           if(fs.existsSync(filePath && secondFilePath)){
-          this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
+           this.myData = JSON.parse(fs.readFileSync(filePath,{encoding:'utf-8'}))
           this.myData.push (JSON.parse(fs.readFileSync(secondFilePath,{encoding:'utf-8'})))
           dataReturn = crud.myData
         }
