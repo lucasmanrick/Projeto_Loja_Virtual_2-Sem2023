@@ -1,9 +1,4 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
 
 .container {
     display: flex;
@@ -35,6 +30,7 @@ body {
     height: 15vh;
     width: 30vh;
     color: white;
+   
 
 }
 
@@ -97,3 +93,6 @@ body {
 
   }
   
+a{
+    text-decoration: none;
+}

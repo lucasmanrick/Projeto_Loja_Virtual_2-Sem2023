@@ -1,8 +1,14 @@
 <header>
-      <div class="titulo">ADEGA SENAI</div>
-         {{#if dataClient}}
-              <div class="welcome-message">Seja bem vindo! <h4>{{dataClient.nome}}</h4></div>
-              {{else}}
-              <div class="cadastro"><a href="/cadastro" class="login">Cadastre-se/Login</a></div>
-          {{/if}}
+
+    {{#if dataClient}}
+    <div class="message">
+        <div class="titulo">ADEGA SENAI</div>
+
+        <div class="welcome-message">Seja bem vindo! {{dataClient.nome}}</div>
+    </div>
+
+    {{else}}
+    <div class="cadastro"><a href="/cadastro" class="login">Cadastre-se/Login</a></div>
+
+    {{/if}}
 </header>
