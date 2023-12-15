@@ -6,11 +6,14 @@ const filePath = './data/logado.JSON'
 const carrinho = (req,res) => {
   let cartCheck = crud.read('./data/carrinho.JSON')
   const existClient = crud.read(filePath)
-  if(cartCheck && existClient){
-   res.render('carrinho',{dataClient:existClient,dataCart:cartCheck[0]})
+  if(existClient) {
+    if(cartCheck){
+      res.render('carrinho',{dataClient:existClient,dataCart:cartCheck[0]})
+     }
   }else{
     res.render('carrinho')
   }
+ 
 }
 
 const carrinhoAdd = (req, res) => {

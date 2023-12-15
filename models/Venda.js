@@ -67,6 +67,7 @@ class Venda {
             this.valorTotal -=10
             this.desconto = 20
           }
+          this.valorTotal = this.valorTotal.toFixed(2)
     }
   }
   
