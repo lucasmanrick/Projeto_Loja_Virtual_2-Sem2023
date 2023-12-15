@@ -7,7 +7,7 @@ const carrinho = (req,res) => {
   let cartCheck = crud.read('./data/carrinho.JSON')
   const existClient = crud.read(filePath)
   if(cartCheck && existClient){
-   res.render('carrinho',{dataClient:existClient,dataCart:cartCheck})
+   res.render('carrinho',{dataClient:existClient,dataCart:cartCheck[0]})
   }else{
     res.render('carrinho')
   }
@@ -45,7 +45,20 @@ const carrinhoAdd = (req, res) => {
       res.render('cadastro')
    }
 }
+
+const carrinhoClear = (req,res) => {
+  crud.deletarArquivo('./data/carrinho.JSON')
+  const existClient = crud.read(filePath)
+  crud.myData = [];
+  const productsReceive = crud.read ('./data/produtos.JSON')
+  if(existClient) {
+    res.render('home',{dataClient:existClient,Produto:crud.read ('./data/produtos.JSON')})
+  }else{
+    res.render('home',{Produto:crud.read ('./data/produtos.JSON')})
+  }
+}
   module.exports = {
     carrinho,
-    carrinhoAdd
+    carrinhoAdd,
+    carrinhoClear
   };
