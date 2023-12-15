@@ -18,9 +18,9 @@ const clientRegister =(req,res) => {
           const newClient = new Cliente (nome,cpf,DataNasc,Email,Senha)
           newClient.id = crud.verificaId()
           crud.create(newClient,filePath)
-          res.render('cadastro',{returnMsg:true})
+          res.render('cadastro',{sucessMsg:true})
       }
-      else {res.render('cadastro',{sucess:true})}
+      else {res.render('cadastro',{returnMsg:true})}
     }
 }
 
@@ -30,7 +30,8 @@ const loginEnter = (req,res) => {
   if (crud.validaLogin (cpf,senha)) {
     let sessionValue = crud.validaLogin(cpf,senha)
     crud.clienteLogado(true,sessionValue)
-    res.render('home', {dataClient:sessionValue})
+    crud.myData.splice(0,crud.myData.length)
+    res.render('home', {dataClient:sessionValue,Produto:crud.read (productsPath)})
   }else{
       res.render('cadastro')
   }
@@ -40,7 +41,7 @@ const loginEnter = (req,res) => {
     const productsReceive = crud.read (productsPath)
     if(clientLog) {
       crud.deletarArquivo('./data/logado.JSON')
-      res.render('home',{Product:productsReceive})
+      res.render('home',{Produto:productsReceive})
     }
 }
 

@@ -1,7 +1,17 @@
-<link rel="stylesheet" href="alcoolica.css">
+{{#section 'styles'}}
+<link rel="stylesheet" href="css/alcoolica.css">
+{{/section}}
 
-<div class="container">
-
-        
-
-</div>
+ {{#if Produto}}
+    <div class="grid">
+    {{#each Produto}}
+        <div class="item">
+            <img src="{{imagemProduto}}" alt="">
+            <h3>{{nome}}</h3>
+            <h2>{{preco}}</h2>
+            {{!-- <input type="submit" name="itemId" id="{{id}}" value="adicionarItem"> --}}
+            <a method="post" href="/carrinho/{{id}}"><input type="button" value="Adicionar ao Carrinho"></a>
+        </div> 
+    {{/each}}
+    </div>
+    {{/if}}

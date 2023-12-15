@@ -33,15 +33,15 @@
                     <span class="icon"><i class="bi bi-cart4"></i></i></span>
                 </a>
             </li>
-
+            {{#if dataClient.permissao}}
             <li class="item-menu">
                 <a href="/adm">
                     <span class="icon"><i class="bi bi-person-circle"></i></span>
                 </a>
             </li>
-
+            {{/if}}
             <li class="item-menu">
-                <a href="#">
+                <a href="/logout">
                     <span class="icon"><i class="bi bi-box-arrow-right"></i></span>
                 </a>
             </li>
