@@ -7,9 +7,8 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 100px;
-    margin-left: -50px;
-}
-
+    margin-left: 80px;
+  }
 .item {
     display: grid;
     justify-content: center;
@@ -59,3 +58,7 @@ body {
     font-weight: bolder;
     border: 1px solid blue;
 }
+
+a{
+    text-decoration: none;
+  }
