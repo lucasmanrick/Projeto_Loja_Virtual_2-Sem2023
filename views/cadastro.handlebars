@@ -2,12 +2,19 @@
 <link rel="stylesheet" href="css/cadastro.css">
 {{/section}}
 
-<h1>Cadastro</h1>
-''
+<br>
+<br>
+<br>
  {{#if returnMsg}}
-     <p style="color:red;">Cpf já cadastrado em nosso banco de dados</p>
-    {{else}}
-    <p style="color: green;">Cadastro Realizado com sucesso</p>
+    <div style="width: 100%;display:flex;justify-content:center">
+        <p style="color:red;">Cpf já cadastrado em nosso banco de dados</p>
+    </div>
+     
+  {{/if}}
+  {{#if sucessMsg}}
+    <div style="width: 100%;display:flex;justify-content:center">
+        <p style="color:rgb(0, 255, 106);">Cpf cadastrado com sucesso!!</p>
+    </div>
   {{/if}}
 
 
@@ -32,7 +39,8 @@
                 <span>ou registre-se usando os seguintes critérios</span>
                 <input type="text" placeholder="Nome" name="nome">
                 <input type="text" placeholder="CPF" name="cpf">
-                <input type="date"  name="dataNasc">
+                <label for="dataNasc">Data de Nascimento:</label>
+                <input type="date"  name="dataNasc" id="dataNasc">
                 <input type="email" placeholder="Email" name="Email">
                 <input type="password" name="Senha" placeholder="Senha">
                 <input type="submit" class="botao">
