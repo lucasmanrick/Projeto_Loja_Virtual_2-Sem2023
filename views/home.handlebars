@@ -11,7 +11,11 @@
             <img src="{{imagemProduto}}" alt="">
             <h3>{{nome}}</h3>
             <h2>R$ {{preco}}</h2>
-            <a method="post" href="/carrinhoAdd/{{id}}"><input type="button" value="Adicionar ao Carrinho"></a>
+            {{#if dataClient}}
+                <a method="post" href="/carrinho/{{id}}"><input type="button" value="Adicionar ao Carrinho"></a>
+            {{else}}
+                <a method="post" href="/cadastro"><input type="button" value="Adicionar ao Carrinho"></a>
+            {{/if}}
         </div> 
     {{/each}}
     </div>
